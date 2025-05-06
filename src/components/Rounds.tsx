@@ -19,6 +19,7 @@ interface RoundsProps {
 export default function Rounds({ matches, results, onResult, activeMatchIndex }: RoundsProps) {
   return (
     <div>
+      <h2 className="text-xl font-semibold">Spielplan</h2>
       {Object.entries(matches).map(([round, games]) => (
         <div key={round}>
           <h3 className="font-semibold text-lg mt-4">Rundi {round}</h3>
