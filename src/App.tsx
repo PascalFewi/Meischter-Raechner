@@ -178,7 +178,7 @@ export default function App() {
                   color: '#ffffff',
                   border: '2px solid #002856'
                 }} >
-                <img src="public/DD_Gross.jpg" alt="Druckerei Dietrich" className="rounded-md max-h-24 w-auto"
+                <img src="DD_Gross.jpg" alt="Druckerei Dietrich" className="rounded-md max-h-24 w-auto"
                 />
                 <p className="text-xl font-semibold">
                  Druckerei Dietrich druckt em FCB de Duume!
@@ -197,7 +197,7 @@ export default function App() {
           border: '2px solid #002856'
         }}>
           <img
-            src="public/DD_Gross.jpg"
+            src="DD_Gross.jpg"
             alt="Druckerei Dietrich"
             className="rounded-md max-h-20 w-auto"
           />
