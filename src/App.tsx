@@ -178,7 +178,7 @@ export default function App() {
                   color: '#ffffff',
                   border: '2px solid #002856'
                 }} >
-                <img src="src/assets/DD_Gross.jpg" alt="Druckerei Dietrich" className="rounded-md max-h-24 w-auto"
+                <img src="public/DD_Gross.jpg" alt="Druckerei Dietrich" className="rounded-md max-h-24 w-auto"
                 />
                 <p className="text-xl font-semibold">
                  Druckerei Dietrich druckt em FCB de Duume!
@@ -189,7 +189,6 @@ export default function App() {
         </div>
       </div>
       <footer className="mt-16 text-center text-sm text-gray-500 py-4">
-        <p>e Websitte vom Pascal</p>
         <a href="https://druckerei-dietrich.ch">
         <div className="md:hidden mt-12 mx-4 p-2 px-6 rounded-md shadow-md flex items-center gap-4"
           style={{
@@ -198,7 +197,7 @@ export default function App() {
           border: '2px solid #002856'
         }}>
           <img
-            src="src/assets/DD_Gross.jpg"
+            src="public/DD_Gross.jpg"
             alt="Druckerei Dietrich"
             className="rounded-md max-h-20 w-auto"
           />
@@ -207,6 +206,7 @@ export default function App() {
           </p>
         </div>
         </a>
+        <p>e Websitte vom Pascal</p>
       </footer>
 
         <img  src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fpascalfewi.github.io%2FMeischter-Raechner%2F&label=Bsuecher&icon=person-fill&color=%23000"></img>
