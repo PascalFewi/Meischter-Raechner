@@ -46,11 +46,15 @@ function recalculateTeams(results: { [key: string]: "home" | "draw" | "away" | n
       const basel = teams.find(t => t.name === "FC Basel 1893");
       if (basel) {
         const contenders = teams.filter(t => t.name !== basel.name);
+        const allMatchesPlayed = teams.every(t => t.gamesPlayed === 38);
+        const someoneEqual = contenders.some(t => t.points === basel.points);
+        const baselWinsOnGD = allMatchesPlayed && someoneEqual;
+
         const allEliminated = contenders.every(
           t => t.points + (38 - t.gamesPlayed) * 3 < basel.points
         );
 
-        if (allEliminated) {
+        if (allEliminated|| baselWinsOnGD) {
           const [hourStr, minuteStr] = match.time.split(":");
           const hour = parseInt(hourStr, 10) + 2;
           const minute = parseInt(minuteStr, 10);
@@ -133,7 +137,7 @@ export default function App() {
               />
             ))}
           </div>  
-          <Header text="Meister Rächner"/>
+          <Header text="Meischter Rächner"/>
         </div>
       </div>)}
 
@@ -153,7 +157,7 @@ export default function App() {
             ))}
           </div> 
           <div > 
-            <Header text="Meister!"/>
+            <Header text="Meischter!"/>
           </div>
         </div>
       </div>)}
