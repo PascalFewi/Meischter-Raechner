@@ -78,7 +78,7 @@ export default function App() {
   const [width, height] = useWindowSize();
   const [results, setResults] = useState<{ [key: string]: "home" | "draw" | "away" | null }>({});
   const [activeMatchIndex, setActiveMatchIndex] = useState(0);
-  const [championTime, setChampionTime] = useState<string | null>(null);
+  const [championTime, setChampionTime] = useState<string | null>("11.05.2025, 18:20");
   const [teams, setTeams] = useState(() => recalculateTeams(results).teams);
 
   const handleResult = (matchKey: string, result: "home" | "draw" | "away") => {
@@ -118,7 +118,7 @@ export default function App() {
         height={height}
         colors={['#ff0000', '#0000ff']}
         recycle={true}
-        numberOfPieces={100}
+        numberOfPieces={300}
       />
     )}
 
@@ -185,7 +185,7 @@ export default function App() {
                 <img src="DD_Gross.jpg" alt="Druckerei Dietrich" className="rounded-md max-h-24 w-auto"
                 />
                 <p className="text-xl font-semibold">
-                 Druckerei Dietrich druckt em FCB de Duume!
+                 Druckerei Dietrich gratuliert zum 21. Meischtertitel!!
                 </p>
               </div>
               </a>
