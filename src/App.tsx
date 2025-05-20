@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Rounds from "./components/Rounds";
 import ChampionTime from "./components/ChampionTime";
 import Standings from "./components/Standings";
-import { matches, initialTeams } from "./data";
+import { matches, initialTeams, gamesPlayed } from "./data";
 import Confetti from 'react-confetti';
 import { useWindowSize } from '@react-hook/window-size';
 
@@ -76,10 +76,10 @@ function recalculateTeams(results: { [key: string]: "home" | "draw" | "away" | n
 
 export default function App() {
   const [width, height] = useWindowSize();
-  const [results, setResults] = useState<{ [key: string]: "home" | "draw" | "away" | null }>({});
-  const [activeMatchIndex, setActiveMatchIndex] = useState(0);
-  const [championTime, setChampionTime] = useState<string | null>("11.05.2025, 18:20");
-  const [teams, setTeams] = useState(() => recalculateTeams(results).teams);
+  const [results, setResults] = useState<{ [key: string]: "home" | "draw" | "away" | null }>((gamesPlayed));
+  const [activeMatchIndex, setActiveMatchIndex] = useState(Object.keys(gamesPlayed).length);
+  const [championTime, setChampionTime] = useState<string | null>("11.05.2025, 18:22");
+  const [teams, setTeams] = useState(() => recalculateTeams(gamesPlayed).teams);
 
   const handleResult = (matchKey: string, result: "home" | "draw" | "away") => {
     const matchIndex = matchesWithIndex.findIndex(

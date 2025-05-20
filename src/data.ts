@@ -21,4 +21,22 @@ export const initialTeams = [
     { round: 38, date: '24. Mai 2025', time: '18:00', homeTeam: 'FC Basel 1893', awayTeam: 'FC Luzern', location: 'St. Jakob-Park' },
     { round: 38, date: '24. Mai 2025', time: '18:00', homeTeam: 'Servette FC', awayTeam: 'FC Lausanne-Sport', location: 'Stade de Genève' },
   ];
+
+export const gamesPlayed: { [key: string]: "home" | "draw" | "away" } = {
+  "FC Lugano_FC Basel 1893": "away",         // 10. Mai
+  "FC Luzern_FC Lausanne-Sport": "draw",     // 11. Mai
+  "Servette FC_BSC Young Boys": "draw",      // 11. Mai
+
+  "FC Lausanne-Sport_FC Basel 1893": "away", // 14. Mai
+  "BSC Young Boys_FC Luzern": "home",        // 15. Mai
+  "Servette FC_FC Lugano": "home",           // 15. Mai
+
+  "BSC Young Boys_FC Basel 1893": "home",    // 18. Mai
+  "FC Luzern_Servette FC": "away",           // 18. Mai
+  "FC Lausanne-Sport_FC Lugano": "draw",     // 18. Mai
+
+  //"FC Lugano_BSC Young Boys": "",        // 24. Mai
+  //"FC Basel 1893_FC Luzern": "",         // 24. Mai
+  //"Servette FC_FC Lausanne-Sport": "",   // 24. Mai
+};
   
