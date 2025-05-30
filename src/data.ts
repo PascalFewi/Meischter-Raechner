@@ -35,8 +35,8 @@ export const gamesPlayed: { [key: string]: "home" | "draw" | "away" } = {
   "FC Luzern_Servette FC": "away",           // 18. Mai
   "FC Lausanne-Sport_FC Lugano": "draw",     // 18. Mai
 
-  //"FC Lugano_BSC Young Boys": "",        // 24. Mai
-  //"FC Basel 1893_FC Luzern": "",         // 24. Mai
-  //"Servette FC_FC Lausanne-Sport": "",   // 24. Mai
+  "FC Lugano_BSC Young Boys": "draw",        // 24. Mai
+  "FC Basel 1893_FC Luzern": "home",         // 24. Mai
+  "Servette FC_FC Lausanne-Sport": "draw",   // 24. Mai
 };
   
